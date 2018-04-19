@@ -85,3 +85,7 @@ int main(int argc, string argv[])
     return 0;
 
 }
+
+
+//passes style50
+//passes check50 cs50/2018/x/vigenere

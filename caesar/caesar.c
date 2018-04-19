@@ -23,31 +23,37 @@ int main(int argc, string argv[])
         //check if a char is aplha
         if (isalpha(inpStr[i]))
         {
-            int alpIndex;
-            int asciiVal;
+            int alpIndex; // declared variable index
+            int asciiVal; // delcared variable ascii
             //check for each char if upper case
             if (isupper(inpStr[i]))
             {
-                asciiVal = inpStr[i];
+                asciiVal = inpStr[i]; // takes uer input and puts it in asciVal
                 alpIndex = asciiVal - 'A';//to calculate the alphabetical index from 'A' to inpStr[i]
-                result = ((alpIndex +  key) % 26) + 'A';
-                printf("%c", result);
+                result = ((alpIndex +  key) % 26) + 'A'; // ciphered text + key JE
+                printf("%c", result); // prints alpha cipher text from uppercase
             }
             //lower case check
             else
             {
-                asciiVal = inpStr[i];
-                alpIndex = asciiVal - 'a';
-                result = ((alpIndex +  key) % 26) + 'a';
-                printf("%c", result);
+                asciiVal = inpStr[i];  // takes user input and puts in asciVal JE
+                alpIndex = asciiVal - 'a'; // takes asci value and - asci character by 'a' JE
+                result = ((alpIndex +  key) % 26) + 'a'; // converts to cipher text JE
+                printf("%c", result); // prints alpha character cipher text JE
             }
         }
-        //print non-alpha chars
+
         else
         {
-            printf("%c", inpStr[i]);
+            printf("%c", inpStr[i]); //print non-alpha chars JE
         }
     }
-    printf("\n");
-    return 0;
+    printf("\n"); // goes to next line JE
+    return 0; // returns null value JE
 }
+
+
+//added some additional comments with JE initial
+// good variable names
+// code passes check50 cs50/2018/x/caesar
+//overall looks good, passes style50 standards
