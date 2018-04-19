@@ -35,12 +35,12 @@ int main(int argc, string argv[])
     int currKeyIndex;
     printf("ciphertext: ");//since C has no concatenation in strings printing each char returned after every iteration
 
-    int keyLength = strlen(key);
+    int keyLength = strlen(key); // keyLegnth = user input key
     int k = 0;
     for (int i = 0, j = 0, length = strlen(plainText); i < length; i++)//runs this loop for user's input of plainText.
     {
         currChar = plainText[i];
-        k = j % keyLength;
+        k = j % keyLength; // variable j modulo keylength of user key  JE
         currKeyChar = key[k];
         if (isupper(currKeyChar))
         {
@@ -67,10 +67,10 @@ int main(int argc, string argv[])
             //lower case check for each char(plain text).
             else
             {
-                currIndex = currChar - 'a';
+                currIndex = currChar - 'a'; // encipher character value  -a asci
                 //printf("currIndex: %i\n", currIndex);
                 //printf("currKeyIndex: %i\n", currKeyIndex);
-                result = ((currIndex +  currKeyIndex) % 26) + 'a';
+                result = ((currIndex +  currKeyIndex) % 26) + 'a'; // result and encipher algorithm JE
                 printf("%c", result);
             }
             j++;
@@ -89,3 +89,6 @@ int main(int argc, string argv[])
 
 //passes style50
 //passes check50 cs50/2018/x/vigenere
+//added some comments, needs some more clarification
+//have some code commented needs to be cleaned up
+//other then that good job.
